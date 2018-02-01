@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import java.util.*;
 
 @org.springframework.web.bind.annotation.RestController
 @RequestMapping("/api")
@@ -33,6 +34,12 @@ public class RestController {
             return user;
         }else return null;
     }
+
+   @GetMapping("/users")
+    public List <Passwords> findAll () {
+       return userRep.findAll();
+   }
+
 
     @PostMapping("/login")
     public String login (@RequestBody Passwords user){

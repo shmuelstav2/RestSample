@@ -1,1 +1,15 @@
 
+                                                      Rest Description
+ 1. Base uri:  52.165.163.138:8080/api
+ 
+ 
+ 2.                                                         Users
+ 
+ 
+                  operation             uri                   input                           output                              comments
+                  
+                     GET              users                     \                           all the users                            \
+                     POST             createUserName        JSON(name,password,role)        status:1-create,2-user
+                                                                                            already exist,3-wrong input               \
+                     POST              login                 JSON(name 'password)           status:1-3 (the role) , 4-wrong password,5-user not exist
+

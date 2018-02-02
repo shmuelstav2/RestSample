@@ -36,7 +36,7 @@ public class RestController {
         }else return null;
     }
 
-    @PostMapping("/createUser1")
+    @PostMapping("/createUserName")
     public String createUser1(@RequestBody Passwords user) {
         JSONObject jo = new JSONObject();
         if (user != null) {

@@ -30,10 +30,32 @@ public class RestController {
     public Passwords createUser(@RequestBody Passwords user){
 
         if(user!=null){
+
             userRep.save(user);
             return user;
         }else return null;
     }
+
+    @PostMapping("/createUser1")
+    public String createUser1(@RequestBody Passwords user) {
+        JSONObject jo = new JSONObject();
+        if (user != null) {
+            Passwords retrieved = userRep.findPasswordsByUsername(user.getUsername());
+            if (retrieved == null) {
+                userRep.save(user);
+                jo.put("status", 1);
+               // return user;
+            }
+            else  jo.put("status", 2);
+                //return null;
+        }
+
+        else  jo.put("status", 3);
+            //return null;
+        return jo.toString();
+    }
+
+
 
    @GetMapping("/users")
     public List <Passwords> findAll () {

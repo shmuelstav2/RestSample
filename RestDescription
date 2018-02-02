@@ -2,8 +2,9 @@
                                                       Rest Description
  1. Base uri:  52.165.163.138:8080/api
  
+ 2.https://www.getpostman.com/collections/68a117a30f1ea60267b2 (postman collection)
  
- 2.                                                         Users
+ 3.                                                         Users
  
  
                   operation             uri                   input                           output                              comments
